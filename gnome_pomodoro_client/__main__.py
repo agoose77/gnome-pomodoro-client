@@ -2,8 +2,6 @@
 import argparse
 import json
 
-import pydbus
-
 from .api import get_dbus_proxy, get_proxy_state
 
 
@@ -12,8 +10,7 @@ def main(argv=None):
     parser.add_argument("-f", "--field", help="select a single field to read")
     args = parser.parse_args(argv)
 
-    bus = pydbus.SessionBus()
-    proxy = get_dbus_proxy(bus)
+    proxy = get_dbus_proxy()
     state = get_proxy_state(proxy)
 
     if args.field is None:

@@ -1,4 +1,9 @@
-def get_dbus_proxy(bus):
+import pydbus
+
+
+def get_dbus_proxy(bus=None):
+    if bus is None:
+        bus = pydbus.SessionBus()
     return bus.get("org.gnome.Pomodoro", "/org/gnome/Pomodoro")
 
 

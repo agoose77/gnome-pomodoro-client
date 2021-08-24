@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gnome-pomodoro-client"
-version = "0.1.1"
+version = "0.1.2"
 description = "A simple dbus client for gnome-pomodoro."
 authors = ["Angus Hollands <goosey15@gmail.com>"]
 
